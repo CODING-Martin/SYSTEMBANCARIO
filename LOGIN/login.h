@@ -3,5 +3,6 @@
 #define LOGIN_H
 
 void mostrarLogin();
+void login();
 
 #endif
