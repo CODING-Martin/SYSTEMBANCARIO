@@ -1,14 +1,20 @@
 ---------LEERLO POR FAVOR------
 
 para que funcione :
-1) ABREN VISUAL STUDIO CODE 
+1) ABREN VISUAL STUDIO CODE
+
+   
    cd Documentos ( en la terminal colocan eso, o donde quieran guardar el programa de forma local, puede ser donde sea)
+
    git clone https://github.com/TU-USUARIO/SISTEMBANCARIO.git    ( deberan colocar eso tal cual con su usario)
+   
    cd SYSTEMBANCARIO (inician el proyecto/ se posicionan en el)
+
+
    code .  (correr archivo)
 
 
-2) PARA QUE PUEDAN GUARDAR Y VER EL PROGRESO DE LOS DEMAS Y EL SUYO EN GITHUB ( ESO DEBE IR EN LA TERMINAL CUANDO DESEAN FINALIZAR EL PROYECTO)
+3) PARA QUE PUEDAN GUARDAR Y VER EL PROGRESO DE LOS DEMAS Y EL SUYO EN GITHUB ( ESO DEBE IR EN LA TERMINAL CUANDO DESEAN FINALIZAR EL PROYECTO)
 git add . 
 git commit -m // colocan aca dentro de comillas lo que han hecho, por ejemplo: " mejore el login"
 git push origin main 
