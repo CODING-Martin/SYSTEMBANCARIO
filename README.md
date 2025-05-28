@@ -16,12 +16,13 @@ PASO 1 ABREN VISUAL STUDIO CODE:
 
 PASO 2 PARA QUE PUEDAN GUARDAR Y VER EL PROGRESO DE LOS DEMAS Y EL SUYO EN GITHUB ( ESO DEBE IR EN LA TERMINAL CUANDO DESEAN FINALIZAR EL PROYECTO)
 
-   
-git add . 
 
-git commit -m // colocan aca dentro de comillas lo que han hecho, por ejemplo: " mejore el login"
+//GUARDAR
+   git add . 
 
-git push origin main 
+   git commit -m // colocan aca dentro de comillas lo que han hecho, por ejemplo: " mejore el login"
+
+   git push origin main 
 
 con esto deberian poder guardar el progeso y que en el archivo del github les salga toda la info
 
@@ -30,7 +31,7 @@ con esto deberian poder guardar el progeso y que en el archivo del github les sa
 
 //////////OBLIGATORIO/////////
 
-
+//CARGAR LOS ULTIMOS DATOS DE GITHUB HECHOS EN EL REPOSITORIO
 ANTES DE EMPEZAR HAGAN UN: git pull origin main 
 
 CON ESTO SE ASEGURAN DE TENER LA ULTIMA VERSION DEL CODIGO ANTES DE TOCAR ALGO, Y EVITAN PISARSE UNO CON LOS OTROS.
@@ -41,3 +42,15 @@ CON ESTO SE ASEGURAN DE TENER LA ULTIMA VERSION DEL CODIGO ANTES DE TOCAR ALGO, 
 
 ------ git pull origin main (en la terminal) SI DESEAN VER LOS CAMBIOS QUE HICIERON LOS DEMAS  
 
+
+
+
+//////TIPS//////////
+git log --oneline
+ Esto te muestra los últimos cambios (commits) en una sola línea cada uno
+
+ git log
+ Esto te muestra los últimos detalles de los commits
+ 
+ Y si querés ver qué líneas cambiaron en la última sincronización
+ git diff origin/main
