@@ -8,7 +8,7 @@ if %errorlevel% neq 0 (
     echo Error en la compilacion.
 ) else (
     echo Compilacion exitosa. Ejecutando...
-
+    
     BIN\bancario.exe
 )
 
