@@ -54,3 +54,6 @@ git log --oneline
  
  Y si querés ver qué líneas cambiaron en la última sincronización
  git diff origin/main
+
+ .echo 
+ esto muestra un salto de linea en la consola (para que no se quede en la linea de comandos)
