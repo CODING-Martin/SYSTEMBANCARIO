@@ -6,7 +6,7 @@ PASO 1 ABREN VISUAL STUDIO CODE:
    
    cd Documentos ( en la terminal colocan eso, o donde quieran guardar el programa de forma local, puede ser donde sea)
 
-   git clone https://github.com/CODING-Martin/SYSTEMBANCARIO.git    ( deberan colocar eso tal cual con su usario)
+   git clone https://github.com/CODING-Martin/SYSTEMBANCARIO.git    ( deberan colocar eso tal cual )
    
    cd SYSTEMBANCARIO (inician el proyecto/ se posicionan en el)
 
