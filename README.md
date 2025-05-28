@@ -1,7 +1,7 @@
 ---------LEERLO POR FAVOR------
 
 para que funcione :
-1) ABREN VISUAL STUDIO CODE
+PASO 1 ABREN VISUAL STUDIO CODE:
 
    
    cd Documentos ( en la terminal colocan eso, o donde quieran guardar el programa de forma local, puede ser donde sea)
@@ -14,7 +14,7 @@ para que funcione :
    code .  (correr archivo)
 
 
-3) PARA QUE PUEDAN GUARDAR Y VER EL PROGRESO DE LOS DEMAS Y EL SUYO EN GITHUB ( ESO DEBE IR EN LA TERMINAL CUANDO DESEAN FINALIZAR EL PROYECTO)
+PASO 2 PARA QUE PUEDAN GUARDAR Y VER EL PROGRESO DE LOS DEMAS Y EL SUYO EN GITHUB ( ESO DEBE IR EN LA TERMINAL CUANDO DESEAN FINALIZAR EL PROYECTO)
 
    
 git add . 
