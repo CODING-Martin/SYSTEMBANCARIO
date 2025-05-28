@@ -9,11 +9,13 @@ void mostrarLogin();
 void mostrarOperaciones();
 void mostrarInterface();
 void mostrarGestionUsuarios();
+void login();
 
 
 int main()
 {
     cout << "Bienvenido al sistema bancario." << endl;
     mostrarLogin();
+    login();
     return 0;
 }
