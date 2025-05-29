@@ -21,7 +21,7 @@ bool verificarCredenciales(const string& u, int p) {
 // Función para registrar el inicio de sesión del usuario
 // Esta función solicita al usuario su nombre de usuario y contraseña, y verifica si son correctos.
 void RegistroLogin() {
-    cout <<"\033[34m" << msg ("Acceso al sistema", " System Access.") << "\033[0m" << endl;
+    cout <<"\033[34m" << msg ("ACCESO AL SISTEMA", " SYSTEM ACCESS.") << "\033[0m" << endl;
     int intentos = 3;
     string users;
     int password;
@@ -36,13 +36,12 @@ void RegistroLogin() {
         cin >> users;
         cout << msg("Contrasena: ", "Password: ")<<endl;
         cin >> password;
-        break;
         if (verificarCredenciales(users, password)) {
             cout << "\033[32m" << msg("Inicio de sesion exitoso!", "Login successful!") << "\033[0m" << endl;
             return;
         }
         case 2:
-        cout << "\033[34m"<< msg("Por favor, cree un nuevo usuario.", "Please create a new user.")<< "\033[0m" << endl;
+        cout << "\033[34m"<< msg("Datos no Encontrados en el Sistema!Por favor, Registrese.", "Data Not Found in the System! Please Register.")<< "\033[0m" << endl;
         cout << msg("Nombre de usuario: ", "Username: ")<<endl;
         cin >> users;
         cout << msg("Contrasena: ", "Password: ")<<endl;
