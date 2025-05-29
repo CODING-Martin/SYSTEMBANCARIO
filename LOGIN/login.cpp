@@ -14,7 +14,6 @@ bool createUser(const std::string& username, const std::string& password);
 string msg(const string& es, const string& en) {
     return (idioma == "en") ? en : es;
 }
-
 // Función para registrar el inicio de sesión del usuario
 // Esta función solicita al usuario su nombre de usuario y contraseña, y verifica si son correctos.
 void RegistroLogin() {
@@ -27,7 +26,7 @@ void RegistroLogin() {
     cin >> opc;
     switch (opc) {
         case 1:
-            cout << "\033[34m" << msg("INGRESE SUS CREDENCIALES", "ENTER YOUR CREDENTIALS TO LOGIN") << "\033[0m" << endl;
+            cout << "\033[34m" << msg("INGRESE SUS CREDENCIALES INICIO DE SESION", "ENTER YOUR CREDENTIALS TO LOGIN") << "\033[0m" << endl;
             while (intentos > 0) {
                 cout << msg("Usuario: ", "User: ") << endl;
                 cin >> users;
@@ -47,6 +46,7 @@ void RegistroLogin() {
             cout << msg("No quedan intentos. Por favor, registre un nuevo usuario.", "No attempts left. Please register a new user.") << endl;
             break;
     case 2:
+    cout << "\033[34m" << msg("INGRESE SUS CREDENCIALES DE REGISTRO", "ENTER YOUR CREDENTIALS TO REGISTER") << "\033[0m" << endl;
     cout << msg("Nombre de usuario: ", "Username: ") << endl;
     cin >> users;
     cout << msg("Contrasena: ", "Password: ") << endl;
@@ -56,6 +56,7 @@ void RegistroLogin() {
     } else {
         cout << "\033[32m" << msg("Usuario creado exitosamente. Por favor, inicie sesion.", "User created successfully. Please log in.") << "\033[0m" << endl;
         // Pide login inmediatamente
+        cout << "\033[34m" << msg("DEBE INICIAR DE SESION NUEVAMENTE", "YOU MUST LOG IN AGAIN") << "\033[0m" << endl;
         int intentos = 3;
         while (intentos > 0) {
             cout << msg("Usuario: ", "User: ") << endl;
@@ -76,8 +77,12 @@ void RegistroLogin() {
                 ) << "\033[0m" << endl;
             }
         }
-        cout << msg("No quedan intentos. Intente más tarde.", "No attempts left. Try again later.") << endl;
+        cout << "\033[31m" << msg("No quedan intentos. bloqueado temporalmente,espere.", "No attempts left. Temporarily blocked,please try again later.") << "\033[0m" << endl;
+        for (int i = 2; i > 0; --i) {
+        this_thread::sleep_for(chrono::seconds(2)); 
+        cout <<endl;
+        }
     }
-    break;
+        break;
     }
 }
