@@ -13,6 +13,7 @@ int main()
     cout << "Bienvenido al sistema bancario." << endl;
     cout << "Seleccione idioma / Select language (es/en): ";
     cin >> idioma;
+    cout <<"hola mundo" << endl;
     RegistroLogin(); // Llamada a la función de registro de inicio de sesión
     interfaz();
     return 0;

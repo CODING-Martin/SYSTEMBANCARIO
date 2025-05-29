@@ -13,5 +13,4 @@ if %errorlevel% neq 0 (
     BIN\bancario.exe
 )
 
-
 pause
