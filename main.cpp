@@ -6,15 +6,17 @@ using namespace std;
 #include "CONFIG/config.h"
 #include <string>
 #include <algorithm> // Para transformar a minúsculas
-void RegistroLogin(); 
 void interfaz();
+void RegistroLogin(); 
+UserManager userManager;
 
 int main()
 {
     cout << "\033[33m"<< "Seleccione su idioma / Select your language (es/en): "<< "\033[0m" << endl;
     cin >> idioma;
     transform(idioma.begin(), idioma.end(), idioma.begin(), ::tolower); // Convertir a minúsculas
+    // interfaz();
     RegistroLogin(); // Llamada a la función de registro de inicio de sesión
-    interfaz();
+    
     return 0;
 }
