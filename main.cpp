@@ -4,9 +4,7 @@ using namespace std;
 #include "OPERATIONS/operaciones.h"
 #include "INTERFACE/interfaz.h"
 #include "USERS/gestionUsuarios.h"
-
-
-
+#include "CONFIG/config.h"
 
 void RegistroLogin(); 
 
