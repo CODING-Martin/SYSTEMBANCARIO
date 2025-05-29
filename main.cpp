@@ -5,15 +5,16 @@ using namespace std;
 #include "USERS/gestionUsuarios.h"
 #include "CONFIG/config.h"
 #include <string>
+#include <algorithm> // Para transformar a minúsculas
 void RegistroLogin(); 
 void interfaz();
 
 int main()
 {
-    cout << "Bienvenido al sistema bancario." << endl;
     cout << "Seleccione idioma / Select language (es/en): ";
     cin >> idioma;
-    cout <<"hola mundo" << endl;
+    transform(idioma.begin(), idioma.end(), idioma.begin(), ::tolower); // Convertir a minúsculas
+
     RegistroLogin(); // Llamada a la función de registro de inicio de sesión
     interfaz();
     return 0;
