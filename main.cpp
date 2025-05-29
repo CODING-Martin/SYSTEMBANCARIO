@@ -5,17 +5,16 @@ using namespace std;
 #include "INTERFACE/interfaz.h"
 #include "USERS/gestionUsuarios.h"
 
-void mostrarLogin();
-void mostrarOperaciones();
-void mostrarInterface();
-void mostrarGestionUsuarios();
+
+
 void login();
 
 
 int main()
 {
     cout << "Bienvenido al sistema bancario." << endl;
-    mostrarLogin();
+    cout << "Seleccione idioma / Select language (es/en): ";
+    cin >> idioma;
     login();
     return 0;
 }
