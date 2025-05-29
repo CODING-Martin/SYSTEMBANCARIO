@@ -81,7 +81,7 @@ void RegistroLogin() {
                         "No attempts left. Please create a new user.") << endl;
                         for (int i = 10; i > 0; --i) {
                             cout << "\r" << msg("Espere ", "Wait ") << i << msg(" segundos...", " seconds...") << flush;
-                        this_thread::sleep_for(chrono::seconds(10));
+                        this_thread::sleep_for(chrono::seconds(2));
                         }
                         cout << endl;
                         // crearUsuario();  
@@ -89,4 +89,5 @@ void RegistroLogin() {
         }
     }
 }
+
 
