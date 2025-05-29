@@ -2,7 +2,7 @@
 [23:25, 27/5/2025] Martin: @echo off
 echo Compilando sistema bancario...
 
-g++ main.cpp LOGIN\login.cpp USERS\gestionUsuarios.cpp OPERATIONS\operaciones.cpp INTERFACE\interfaz.cpp -o BIN\bancario.exe
+g++ -IUSERS main.cpp LOGIN\login.cpp USERS\gestionUsuarios.cpp OPERATIONS\operaciones.cpp INTERFACE\interfaz.cpp -o BIN\bancario.exe
 
 if %errorlevel% neq 0 (
     echo Error en la compilacion.

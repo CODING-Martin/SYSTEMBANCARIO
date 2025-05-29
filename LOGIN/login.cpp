@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
-// #include "USERS/gestionUsuarios.h" // Para acceder a usuarios y crearUsuario()
+#include "USERS/gestionUsuarios.h" // Para acceder a usuarios y crearUsuario()
 using namespace std;
 
 extern map<string, int> usuarios; // El mapa está en gestionUsuarios.cpp/ extern sirve para compartirlo entre archivos
