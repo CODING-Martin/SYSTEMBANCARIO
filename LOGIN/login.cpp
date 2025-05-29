@@ -27,14 +27,14 @@ void RegistroLogin() {
     string users;
     int password;
     int opc;
-    cout <<msg (" 1. Presione 1 para iniciar sesion" ,"Press 1 to login\n");
-    cout <<msg (" 2. Presione 2 para registrar un nuevo usuario" ,"Press 2 to register a new user\n");
+    cout <<msg (" 1. Presione 1 para iniciar sesion" ,"Press 1 to login\n")<<endl;
+    cout <<msg (" 2. Presione 2 para registrar un nuevo usuario" ,"Press 2 to register a new user\n")<<endl;
     switch (opc) {
         case 1:
-        cout <<msg ("ingrese sus credenciales","enter your credentials to login\n");
-        cout << msg("Usuario: ", "User: ");
+        cout <<msg ("ingrese sus credenciales","enter your credentials to login\n")<<endl;
+        cout << msg("Usuario: ", "User: ")<<endl;
         cin >> users;
-        cout << msg("Contrasena: ", "Password: ");
+        cout << msg("Contrasena: ", "Password: ")<<endl;
         cin >> password;
         if (verificarCredenciales(users, password)) {
             cout << "\033[32m" << msg("Inicio de sesion exitoso!", "Login successful!") << "\033[0m" << endl;
@@ -42,14 +42,14 @@ void RegistroLogin() {
         }
         case 2:
         cout << msg("Por favor, cree un nuevo usuario.", "Please create a new user.") << endl;
-        cout << msg("Nombre de usuario: ", "Username: ");
+        cout << msg("Nombre de usuario: ", "Username: ")<<endl;
         cin >> users;
         if (usuarios.find(users) != usuarios.end()) {
             cout << msg("El usuario ya existe.", "The user already exists.") << endl;
             return;
         }
         int password;
-        cout << msg("Contrasena: ", "Password: ");
+        cout << msg("Contrasena: ", "Password: ")<<endl;
         cin >> password;
         // crearUsuario(users, password);
         break;
@@ -58,9 +58,9 @@ void RegistroLogin() {
     }
     // Bucle para solicitar las credenciales del usuario 
     while (intentos > 0) {
-        cout << msg("Usuario: ", "User: ");
+        cout << msg("Usuario: ", "User: ")<<endl;
         cin >> users;
-        cout << msg("Contrasena: ", "Password: ");
+        cout << msg("Contrasena: ", "Password: ")<<endl;
         cin >> password;
         if (verificarCredenciales(users, password)) {
             cout << "\033[32m" << msg("Inicio de sesion exitoso!", "Login successful!") << "\033[0m" << endl;
@@ -69,7 +69,7 @@ void RegistroLogin() {
         intentos--;
         cout << "\033[31m" << msg(
         string("Credenciales incorrectas. Intentos restantes: ") + to_string(intentos),
-        string("Incorrect credentials. Remaining attempts: ") + to_string(intentos)
+        string("Incorrect credentials. Remaining attempts: ") + to_string(intentos) //lo convertimos a string 
     ) << "\033[0m" << endl;
 }
         if (intentos == 0) {

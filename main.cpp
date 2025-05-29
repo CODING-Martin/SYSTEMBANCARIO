@@ -14,7 +14,6 @@ int main()
     cout << "Seleccione idioma / Select language (es/en): ";
     cin >> idioma;
     transform(idioma.begin(), idioma.end(), idioma.begin(), ::tolower); // Convertir a minúsculas
-
     RegistroLogin(); // Llamada a la función de registro de inicio de sesión
     interfaz();
     return 0;
