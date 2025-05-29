@@ -7,7 +7,8 @@ using namespace std;
 
 
 
-void login();
+
+void registroLogin(); 
 
 
 int main()
@@ -15,6 +16,7 @@ int main()
     cout << "Bienvenido al sistema bancario." << endl;
     cout << "Seleccione idioma / Select language (es/en): ";
     cin >> idioma;
-    login();
+    registroLogin(); // Llamada a la función de registro de inicio de sesión
+
     return 0;
 }

@@ -1,58 +1,46 @@
 #include <iostream>
+#include <string>
+#include <map>
+#include "USERS/gestionUsuarios.h" // Para acceder a usuarios y crearUsuario()
 using namespace std;
 
-//declaracion de variables
-string users;
-string newUser;
-int password;
-int newPassword;
-string idioma="es"; //idioma por defecto
-//funcion para mensaje en ambos idiomas
+extern map<string, int> usuarios; // El mapa está en gestionUsuarios.cpp/ extern sirve para compartirlo entre archivos
+extern string idioma;
+
 string msg(const string& es, const string& en) {
     return (idioma == "en") ? en : es;
-
-    
 }
-//registro de users/password/idioma.
-void login() {
-    cout << (msg("Iniciar sesion.", "Login.")) << endl;
-    cout << msg("Por favor, ingrese sus credenciales:", "Please enter your credentials:") << endl;
-    cout << msg("Usuario/Ussers (ej. admin): ", "User (e.g. admin): ") << endl;
-    cin >> users;
-    cout << msg("Contrasena/password (ej. 1982): ", "Password (e.g. 1982): ") << endl;
-    cin.ignore();
-    cin >> password;
-
-//comprobacion del login. 
-    if (users == "Martin" && password == 1234) {
-        cout << msg("Inicio de sesion exitoso!", "Login successful!") << endl;
-    } 
-    else if (users == "Renzo" && password == 123456) {
-        cout << msg("Inicio de sesion exitoso!", "Login successful!") << endl;
-    } 
-    else if (users == "Pedro" && password == 123456789) {
-        cout <<  msg("Inicio de sesion exitoso!", "Login successful!") << endl;
-    }
-    else if (users == "Jorge" && password == 123456789) {
-        cout << msg ("Inicio de sesion exitoso!", "Login successful!") << endl; 
-    }
-    else {
-        //indique datos correctos
-        cout << msg( "\033[31mDatos incorrectos. Por favor,verifique su usuario o password.\033[0m", "Incorrect data. Please check your username or password.") << endl;
-    }
-    
+// Función para verificar las credenciales del usuario
+bool verificarCredenciales(const string& u, int p) {
+    auto it = usuarios.find(u);
+    return it != usuarios.end() && it->second == p;
 }
-
-//si no hay usuario previo,se crea uno nuevo.
-void crearUsuario() {
-    
-    cout << msg ("No se encontraron credenciales previas.", "No previous credentials found.") << endl;
-    cout << msg ("Por favor, cree un nuevo usuario:", "Please create a new user:") << endl;
-    cout << msg ("Usuario (ej. admin): ", "User (e.g. admin): ") << endl;
-    cin >> newUser;
-    cout <<  msg ("Contrasena (ej. 1982): ", "Password (e.g. 1982): ") << endl;
-    cin.ignore();
-    cin >> newPassword;
-    cout << msg ("Usuario creado exitosamente!", "User created successfully!") << endl;
+// Función para registrar el inicio de sesión del usuario
+// Esta función solicita al usuario su nombre de usuario y contraseña, y verifica si son correctos.
+void RegistroLogin() {
+    int intentos = 3;
+    string users;
+    int password;
+    while (intentos > 0) {
+        cout << msg("Usuario: ", "User: ");
+        cin >> users;
+        cout << msg("Contrasena: ", "Password: ");
+        cin >> password;
+        if (verificarCredenciales(users, password)) {
+            cout << "\033[32m" << msg("Inicio de sesion exitoso!", "Login successful!") << "\033[0m" << endl;
+            return;
+        } else {
+        intentos--;
+        cout << "\033[31m" << msg(
+        string("Credenciales incorrectas. Intentos restantes: ") + to_string(intentos),
+        string("Incorrect credentials. Remaining attempts: ") + to_string(intentos)
+    ) << "\033[0m" << endl;
 }
-
+        if (intentos == 0) {
+            cout << msg("No quedan intentos. Por favor, cree un nuevo usuario.",
+                        "No attempts left. Please create a new user.") << endl;
+            // crearUsuario(); llamar mas tarde  
+            return;
+        }
+    }
+}
