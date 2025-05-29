@@ -6,11 +6,10 @@
 #include <chrono> 
 #include "gestionUsuarios.h" // Para acceder a usuarios y crearUsuario()
 using namespace std;
-
-
 extern map<string, int> usuarios; // El mapa está en gestionUsuarios.cpp/ extern sirve para compartirlo entre archivos
 extern string idioma;
 
+// Función para mostrar mensajes en el idioma seleccionado
 string msg(const string& es, const string& en) {
     return (idioma == "en") ? en : es;
 }
@@ -22,32 +21,38 @@ bool verificarCredenciales(const string& u, int p) {
 // Función para registrar el inicio de sesión del usuario
 // Esta función solicita al usuario su nombre de usuario y contraseña, y verifica si son correctos.
 void RegistroLogin() {
-    cout << msg("Bienvenido al sistema bancario.", "Welcome to the banking system.") << endl;
+    cout <<"\033[34m" << msg ("Acceso al sistema", " System Access.") << "\033[0m" << endl;
     int intentos = 3;
     string users;
     int password;
     int opc;
     cout <<msg (" 1. Presione 1 para iniciar sesion" ,"Press 1 to login\n")<<endl;
     cout <<msg (" 2. Presione 2 para registrar un nuevo usuario" ,"Press 2 to register a new user\n")<<endl;
+    cin >> opc;
     switch (opc) {
         case 1:
-        cout <<msg ("ingrese sus credenciales","enter your credentials to login\n")<<endl;
+        cout << "\033[34m"<<msg ("INGRESE SUS CREDENCIALES","ENTER YOUR CREDENTIALS TO LOGIN")<<"\033[0m"<<endl;
         cout << msg("Usuario: ", "User: ")<<endl;
         cin >> users;
         cout << msg("Contrasena: ", "Password: ")<<endl;
         cin >> password;
+        break;
         if (verificarCredenciales(users, password)) {
             cout << "\033[32m" << msg("Inicio de sesion exitoso!", "Login successful!") << "\033[0m" << endl;
             return;
         }
         case 2:
-        cout << msg("Por favor, cree un nuevo usuario.", "Please create a new user.") << endl;
+        cout << "\033[34m"<< msg("Por favor, cree un nuevo usuario.", "Please create a new user.")<< "\033[0m" << endl;
         cout << msg("Nombre de usuario: ", "Username: ")<<endl;
         cin >> users;
+        cout << msg("Contrasena: ", "Password: ")<<endl;
+        cin >> password;
+        
+        
         if (usuarios.find(users) != usuarios.end()) {
-            cout << msg("El usuario ya existe.", "The user already exists.") << endl;
+            cout <<"\033[32m" << msg("El usuario ya existe.", "The user already exists.") << "\033[0m" << endl;
             return;
-        }
+        }   
         int password;
         cout << msg("Contrasena: ", "Password: ")<<endl;
         cin >> password;
@@ -85,3 +90,4 @@ void RegistroLogin() {
         }
     }
 }
+

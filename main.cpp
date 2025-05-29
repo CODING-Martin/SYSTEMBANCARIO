@@ -11,7 +11,7 @@ void interfaz();
 
 int main()
 {
-    cout << "Seleccione idioma / Select language (es/en): ";
+    cout << "\033[33m"<< "Seleccione su idioma / Select your language (es/en): "<< "\033[0m" << endl;
     cin >> idioma;
     transform(idioma.begin(), idioma.end(), idioma.begin(), ::tolower); // Convertir a minúsculas
     RegistroLogin(); // Llamada a la función de registro de inicio de sesión
