@@ -15,7 +15,7 @@ void interfaz()
     cout <<"\n 3) Ingresar dinero"<< endl;
     cout <<"\n 4) Recibir dinero"<< endl;
     cout <<"\n 5) Prestamos"<< endl;
-    cout <<"\n 6) Cerrar sesión"<< endl;
+    cout <<"\n 6) Cerrar sesion"<< endl;
     cout << "====================================="<< endl;
     cout << "Opcion: ";
     cin >> opcion;
