@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include "config.h"  // si lo creaste
+
 #include "gestionUsuarios.h" // Para acceder a usuarios y crearUsuario()
 using namespace std;
 
