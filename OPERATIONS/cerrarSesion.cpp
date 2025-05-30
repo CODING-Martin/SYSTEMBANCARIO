@@ -4,14 +4,13 @@
 using namespace std;
 
 bool cerrarSesion(){
-    char confirmar;
-    int i; 
+    int i, opcion;
     bool comprobador = false;
     do
     {
         cout<<"¿Esta seguro que desea cerrar sesion? (s/n): ";
-        cin >> confirmar;
-            if(confirmar == 's' || confirmar == 'S'){
+        cin >> opcion;
+            if(opcion == 1){
                 cout << "Cerrando sesion";
                     for(i = 3; i > 0; --i){
                         sleep(1000);
@@ -20,7 +19,7 @@ bool cerrarSesion(){
                     comprobador = true;
                     return true;
             }
-            else if (confirmar == 'n' || confirmar == 'N'){
+            else if (opcion == 0){
                 cout << "Volviendo al menu de inicio";
                 cout << "Cerrando sesion";
                     for(i = 3; i > 0; --i){
@@ -31,7 +30,7 @@ bool cerrarSesion(){
                     comprobador = true;
             } 
             else{
-                mensajeDeError(confirmar, 2);
+                mensajeDeError(opcion, 2);
                 comprobador = false;
             }
     }while (comprobador == false);   
