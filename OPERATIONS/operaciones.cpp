@@ -1,6 +1,5 @@
 #include <iostream>
 #include "operaciones.h"
-#include "gestionUsuarios.h"
 using namespace std;
 
 void operacionesMenu(int opcion, double saldo){
