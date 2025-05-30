@@ -1,10 +1,12 @@
 #include <iostream>
 #include "interfaz.h"
 #include <string>
+#include <windows.h>
 using namespace std;
 
 void interfaz()
 {
+    SetConsoleOutputCP(CP_UTF8);
     int opcion;
     cout << "====================================="<< endl;
     cout << "  BANCO DE LA UNIVERSIDAD ACONCAGUA"<< endl;
