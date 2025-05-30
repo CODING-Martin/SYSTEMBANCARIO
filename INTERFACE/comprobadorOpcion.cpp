@@ -9,7 +9,7 @@ bool comprobadorDeOpciones(int opcion, int limite){
         return true;
     }
     else{
-        mensajeDeError(opcion, limite);
+        mensajeDeError();
         return false;
     }
 }
