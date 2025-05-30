@@ -21,9 +21,7 @@ void prestamos(double saldo) {
             comprobador = true; 
         }
     } while (!comprobador);
-
-    comprobador = false;
-
+    calcularPrestamos(saldo, prestamoMaximo, cuotas);    
     do {
         cout << "En base a su sueldo le podemos prestar un importe máximo de $" << prestamoMaximo << "." << endl;
         cout << "Ingrese el importe a prestar: $";
