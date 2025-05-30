@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -5,7 +6,6 @@ using namespace std;
 #include "LOGIN/login.h"
 #include "INTERFACE/interfaz.h"
 #include "USERS/gestionUsuarios.h"
-#include "CONFIG/config.h"
 #include <string>
 #include <algorithm>
 
@@ -15,6 +15,7 @@ UserManager userManager;
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
     while (true) {
         RegistroLogin();
         cout << "Desea intentar de nuevo? (s/n): ";
@@ -28,7 +29,7 @@ int main()
         cout << endl << endl;
     }
 
-    cout << "\n\033[32m" << "Gracias por usar el sistema. Vuelva Pronto!" << "\033[0m" << endl;
+    cout << "\n\033[32m" << "Gracias por usar el sistema. Vuelva Pronto! 😃 " << "\033[0m" << endl;
     system("pause"); // Esto mantiene la terminal abierta hasta que el usuario presione una tecla
     return 0;
 }

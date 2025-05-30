@@ -1,3 +1,4 @@
+#include <windows.h>
 #include "gestionUsuarios.h"
 #include <iostream>
 using namespace std;
