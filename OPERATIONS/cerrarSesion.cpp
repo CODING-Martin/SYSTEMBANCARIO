@@ -30,7 +30,7 @@ bool cerrarSesion(){
                     comprobador = true;
             } 
             else{
-                mensajeDeError(opcion, 2);
+                mensajeDeError();
                 comprobador = false;
             }
     }while (comprobador == false);   
