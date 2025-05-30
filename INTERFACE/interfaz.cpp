@@ -1,11 +1,12 @@
 #include <iostream>
 #include "interfaz.h"
 #include <string>
+#include "operaciones.h"
 using namespace std;
 
 void interfaz()
 {
-    int opcion;
+    int opcion, limite = 6;
     bool comprobador = false;
     do {
         cout << "====================================="<< endl;
@@ -21,30 +22,7 @@ void interfaz()
         cout << "====================================="<< endl;
         cout << "Opcion: ";
         cin >> opcion;
-
-    
-        switch (opcion){
-            case 1:
-                void consultarEstadoBancario();
-                break;
-            case 2:
-                void transferirDinero();
-                break;
-            case 3:
-                void ingresarDinero();
-                break;
-            case 4:
-                void recibirDinero();
-                break;
-            case 5:
-                void prestamos();
-                break;
-            case 6:
-                void cerrarSesion();
-                break;
-            default:
-                bool mensajeDeError();
-                break;
-            }
+        comprobador = comprobadorDeOpciones(opcion, limite);
     }while(!comprobador);
+    operacionesMenu(opcion);
 }

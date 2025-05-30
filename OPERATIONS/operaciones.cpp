@@ -23,8 +23,5 @@ void operacionesMenu(int opcion){
         case 6:
             void cerrarSesion();
             break;
-        default:
-            bool mensajeDeError();
-            break;
     }
 }
