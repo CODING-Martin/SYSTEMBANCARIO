@@ -3,7 +3,7 @@
 #include "interfaz.h"
 using namespace std;
 
-void prestamos(double saldo) {
+void prestamos(double& saldo) {
     double importePrestamos;
     double prestamoMaximo, deuda;
     int cuotas;
