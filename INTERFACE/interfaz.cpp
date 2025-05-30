@@ -2,7 +2,7 @@
 #include "interfaz.h"
 #include <string>
 #include <windows.h>
-#include "USERS\gestionUsuarios.h"
+#include "USERS/gestionUsuarios.h"
 using namespace std;
 
 void interfaz(string username)
