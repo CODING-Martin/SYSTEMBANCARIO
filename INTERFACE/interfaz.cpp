@@ -29,13 +29,12 @@ void interfaz()
             cout << "====================================="<< endl;
             cout << "Opcion: ";
             cin >> opcion;
-        comprobador = comprobadorDeOpciones(opcion, limite);
+            comprobador = comprobadorDeOpciones(opcion, limite);
         }while(!comprobador);
             operacionesMenu(opcion, saldo);
             comprobador = false;
+            if (opcion == 6){
+                comprobador = cerrarSesion();
+            }
     } while (comprobador == false);
-    
-
-    cout<<"Se termina el programa. Gracias por usar el sistema. 😃"<<endl;
-    system("pause");
 }
