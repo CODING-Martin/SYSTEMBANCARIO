@@ -6,6 +6,6 @@
 extern std::string idioma;
 
 
-void RegistroLogin(); // Prototipo de la función para registrar el inicio de sesión del usuario
+bool RegistroLogin(); // Prototipo de la función para registrar el inicio de sesión del usuario
 
 #endif

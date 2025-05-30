@@ -10,7 +10,7 @@ using namespace std;
 #include <algorithm>
 
 void interfaz();
-void RegistroLogin();
+bool RegistroLogin();
 UserManager userManager;
 
 int main()
