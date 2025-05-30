@@ -16,6 +16,7 @@ UserManager userManager;
 
 int main()
 {
+    interfaz();
     SetConsoleOutputCP(CP_UTF8);
     while (true) {
         int resultado = RegistroLogin();
@@ -38,4 +39,5 @@ int main()
     cout << "\n\033[32m" << "Gracias por usar el sistema. Vuelva Pronto! 😃 " << "\033[0m" << endl;
     system("pause");
     return 0;
+    
 }
