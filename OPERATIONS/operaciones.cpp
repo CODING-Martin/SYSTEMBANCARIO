@@ -3,7 +3,7 @@
 #include "gestionUsuarios.h"
 using namespace std;
 
-void operacionesMenu(int opcion){
+void operacionesMenu(int opcion, double saldo){
     switch (opcion){
         case 1:
             void consultarEstadoBancario();
@@ -18,7 +18,7 @@ void operacionesMenu(int opcion){
             void recibirDinero();
             break;
         case 5:
-            void prestamos(double saldo, double prestamoMaximo, int coutas);
+            void prestamos(double saldo);
             break;
         case 6:
             void cerrarSesion();
