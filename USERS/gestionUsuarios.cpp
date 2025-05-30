@@ -31,11 +31,5 @@ bool UserManager::validateUser(const string& username, const string& password) {
     auto it = users.find(uname);
     return (it != users.end() && it->second == password);
 }
-// void UserManager::modifyUser(const string& username, const string& newPassword) {
-//     string uname = toLower(username);
-//     auto it = users.find(uname);
-//     if (it != users.end()) {
-//         it->second = newPassword;
-//     }
-// }
+
 

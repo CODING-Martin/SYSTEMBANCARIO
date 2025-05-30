@@ -4,14 +4,10 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/USERS",
-                "${workspaceFolder}/LOGIN",
-                "${workspaceFolder}/OPERATIONS",
-                "${workspaceFolder}/INTERFACE",
                 "C:/msys64/mingw64/include",
                 "C:/msys64/mingw64/include/c++/14.2.0",
                 "C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"
-            ],
+                ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
