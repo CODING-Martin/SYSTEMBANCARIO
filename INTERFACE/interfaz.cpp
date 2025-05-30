@@ -2,10 +2,9 @@
 #include "interfaz.h"
 #include <string>
 #include <windows.h>
-#include "USERS/gestionUsuarios.h"
 using namespace std;
 
-void interfaz(string username)
+void interfaz()
 {
     SetConsoleOutputCP(CP_UTF8);
     int opcion;
@@ -13,7 +12,7 @@ void interfaz(string username)
     do {
         cout << "====================================="<< endl;
         cout << "  BANCO DE LA UNIVERSIDAD ACONCAGUA"<< endl;
-        cout << "               HOLA! "<<username<<"             "<< endl;
+        cout << "                HOLA!                 "<< endl;
         cout << "====================================="<< endl;
         cout <<"\n 1) Consultar estado bancario"<< endl;
         cout <<"\n 2) Transferir dinero"<< endl;
