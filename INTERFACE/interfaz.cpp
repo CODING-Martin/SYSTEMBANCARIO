@@ -4,11 +4,13 @@
 #include "interfaz.h"
 #include <string>
 #include "operaciones.h"
+
 using namespace std;
 
 void interfaz()
 {
     int opcion, limite = 6;
+    double saldo;
     bool comprobador = false;
     do {
         cout << "====================================="<< endl;
@@ -26,5 +28,5 @@ void interfaz()
         cin >> opcion;
         comprobador = comprobadorDeOpciones(opcion, limite);
     }while(!comprobador);
-    operacionesMenu(opcion);
+    operacionesMenu(opcion, saldo);
 }

@@ -18,7 +18,7 @@ void operacionesMenu(int opcion){
             void recibirDinero();
             break;
         case 5:
-            void prestamos();
+            void prestamos(double saldo, double prestamoMaximo, double importePrestamos, int coutas);
             break;
         case 6:
             void cerrarSesion();
