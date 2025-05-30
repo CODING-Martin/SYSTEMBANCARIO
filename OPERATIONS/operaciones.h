@@ -7,7 +7,7 @@ void consultarEstadoBancario();
 void transferirDinero();
 void ingresarDinero();
 void recibirDinero();
-void prestamos();
+void prestamos(double saldo);
 void cerrarSesion();
 
 //subfunciones
