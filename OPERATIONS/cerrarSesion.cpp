@@ -13,5 +13,6 @@ void cerrarSesion(){
         for(i = 3; i > 0; --i){
             sleep(1000);
             cout <<".";
+        }
     }
 }
