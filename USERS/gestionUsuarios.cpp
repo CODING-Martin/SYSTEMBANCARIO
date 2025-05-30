@@ -1,4 +1,5 @@
 #include <windows.h>
+#undef byte
 #include "gestionUsuarios.h"
 #include <iostream>
 using namespace std;
@@ -6,12 +7,10 @@ using namespace std;
 
 // Implementación de los métodos
 UserManager::UserManager() {
-    users["martin"] = "admin";
-    users["pedro"] = "admin";
-    users["renzo"] = "admin";
-    users["jorge"] = "admin";
+    users["admin"] = "password"; // Usuario por defecto
     
 }
+int UserManager::getUserCount() const { return users.size(); }
 string toLower(const string& str) {
     string lower = str;
     transform(lower.begin(), lower.end(), lower.begin(), ::tolower);

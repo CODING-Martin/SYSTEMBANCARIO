@@ -1,3 +1,5 @@
+#include <windows.h>
+#undef byte
 #include <iostream>
 #include "interfaz.h"
 #include <string>
