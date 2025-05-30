@@ -6,6 +6,7 @@
 using namespace std;
 #include "LOGIN/login.h"
 #include "INTERFACE/interfaz.h"
+#include "OPERATIONS/operaciones.h"
 #include "USERS/gestionUsuarios.h"
 #include <string>
 #include <algorithm>

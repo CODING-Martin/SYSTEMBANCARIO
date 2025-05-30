@@ -9,6 +9,7 @@ void mensajeDeError(int opcion, int limite){
     cout<<endl;
     cout<<endl;
     cout << "Pulse ENTER para continuar...";
+    cin.ignore();
     cin.get();
 }
 

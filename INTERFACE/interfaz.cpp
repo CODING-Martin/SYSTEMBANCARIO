@@ -12,21 +12,30 @@ void interfaz()
     int opcion, limite = 6;
     double saldo;
     bool comprobador = false;
-    do {
-        cout << "====================================="<< endl;
-        cout << "  BANCO DE LA UNIVERSIDAD ACONCAGUA"<< endl;
-        cout << "                HOLA!                 "<< endl;
-        cout << "====================================="<< endl;
-        cout <<"\n 1) Consultar estado bancario"<< endl;
-        cout <<"\n 2) Transferir dinero"<< endl;
-        cout <<"\n 3) Ingresar dinero"<< endl;
-        cout <<"\n 4) Recibir dinero"<< endl;
-        cout <<"\n 5) Prestamos"<< endl;
-        cout <<"\n 6) Cerrar sesion"<< endl;
-        cout << "====================================="<< endl;
-        cout << "Opcion: ";
-        cin >> opcion;
+    do
+    {
+        
+        do {
+            cout << "====================================="<< endl;
+            cout << "  BANCO DE LA UNIVERSIDAD ACONCAGUA"<< endl;
+            cout << "                HOLA!                 "<< endl;
+            cout << "====================================="<< endl;
+            cout <<"\n 1) Consultar estado bancario"<< endl;
+            cout <<"\n 2) Transferir dinero"<< endl;
+            cout <<"\n 3) Ingresar dinero"<< endl;
+            cout <<"\n 4) Recibir dinero"<< endl;
+            cout <<"\n 5) Prestamos"<< endl;
+            cout <<"\n 6) Cerrar sesion"<< endl;
+            cout << "====================================="<< endl;
+            cout << "Opcion: ";
+            cin >> opcion;
         comprobador = comprobadorDeOpciones(opcion, limite);
-    }while(!comprobador);
-    operacionesMenu(opcion, saldo);
+        }while(!comprobador);
+            operacionesMenu(opcion, saldo);
+            comprobador = false;
+    } while (comprobador == false);
+    
+
+    cout<<"Se termina el programa. Gracias por usar el sistema. 😃"<<endl;
+    system("pause");
 }
