@@ -3,8 +3,8 @@
 #include "interfaz.h"
 using namespace std;
 
-void operacionesMenu(int opcion, double saldo);
-void prestamos(double saldo);
+void operacionesMenu(int opcion, double& saldo);
+void prestamos(double& saldo);
 bool cerrarSesion();
 
 

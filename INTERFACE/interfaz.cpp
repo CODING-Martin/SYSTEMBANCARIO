@@ -14,7 +14,6 @@ void interfaz()
     bool comprobador = false;
     do
     {
-        
         do {
             cout << "====================================="<< endl;
             cout << "  BANCO DE LA UNIVERSIDAD ACONCAGUA"<< endl;
