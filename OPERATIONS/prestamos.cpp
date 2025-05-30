@@ -1,7 +1,6 @@
 #include <iostream>
 #include "operaciones.h"
 #include "interfaz.h"
-
 using namespace std;
 
 void prestamos(double saldo) {
