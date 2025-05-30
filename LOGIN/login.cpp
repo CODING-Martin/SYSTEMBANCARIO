@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include <windows.h>
 #undef byte
 #include <iostream>
@@ -10,14 +11,16 @@ using namespace std;
 extern UserManager userManager;
 
 // Función para registrar el inicio de sesión del usuario
-// Esta función solicita al usuario su nombre de usuario y contraseña, y verifica si son correctos.
 int RegistroLogin() {
+    cout << endl;
     cout << "\033[34m" << "+--------------------------+" << endl;
     cout << "|    ACCESO AL SISTEMA     |" << endl;
     cout << "+--------------------------+" << "\033[0m" << endl;
     int intentos = 3;
     string users, password;
     int opc;
+    cout << endl;
+while (true) {
     if (userManager.getUserCount() == 1) {
         cout << " 1. Presione 1 para iniciar sesion (SOLO ADMINISTRADOR)" << endl;
         cout << " 2. Presione 2 para registrar un nuevo usuario" << endl;
@@ -25,9 +28,19 @@ int RegistroLogin() {
         cout << " 1. Presione 1 para iniciar sesion (USUARIO NUEVO)" << endl;
         cout << " 2. Presione 2 para registrar un nuevo usuario" << endl;
     }
-    cin >> opc;
     cout << endl;
-    cout << endl;
+    cout << "Seleccione una opcion: ";
+    if (cin >> opc && (opc == 1 || opc == 2)) {
+        break; // Validar que la opción sea 1 o 2
+    } else {
+        cout << "\033[31m" << "❌ Opcion invalida. Intente nuevamente." << "\033[0m" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpiar el buffer de entrada
+        cout << endl;
+    }
+}
+cout << endl;
+
     switch (opc) {
         case 1:
             cout << "\033[34m" << "🔒 INGRESE SUS CREDENCIALES DE INICIO DE SESION:" << "\033[0m" << endl;
@@ -58,6 +71,7 @@ int RegistroLogin() {
             cout << endl;
             cout << "\033[35m" << "🔑 CONTRASEÑA: " << "\033[0m" << endl;
             cin >> password;
+            cout << endl;
             if (!userManager.createUser(users, password)) {
                 cout << "\033[31m" << "✖️  El usuario o contraseña ya existe." << "\033[0m" << endl;
             } else {

@@ -6,11 +6,13 @@ using namespace std;
 #include <algorithm> 
 
 // Implementación de los métodos
-UserManager::UserManager() {
-    users["admin"] = "password"; // Usuario por defecto
+
+UserManager::UserManager() { //Usuario por defecto, administrador 
+    users["admin"] = "password"; 
     
 }
 int UserManager::getUserCount() const { return users.size(); }
+
 string toLower(const string& str) {
     string lower = str;
     transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
@@ -29,14 +31,11 @@ bool UserManager::validateUser(const string& username, const string& password) {
     auto it = users.find(uname);
     return (it != users.end() && it->second == password);
 }
-void UserManager::modifyUser(const string& username, const string& newPassword) {
-    string uname = toLower(username);
-    auto it = users.find(uname);
-    if (it != users.end()) {
-        it->second = newPassword;
-    }
-}
-bool UserManager::deleteUser(const string& username) {
-    string uname = toLower(username);
-    return users.erase(uname) > 0;
-}
+// void UserManager::modifyUser(const string& username, const string& newPassword) {
+//     string uname = toLower(username);
+//     auto it = users.find(uname);
+//     if (it != users.end()) {
+//         it->second = newPassword;
+//     }
+// }
+

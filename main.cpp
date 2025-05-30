@@ -24,19 +24,17 @@ int main()
             break;
         } else if (resultado == 0) {
             // Usuario falló login o quiere salir
-            cout << "Desea intentar de nuevo? (s/n): ";
+            cout << "Desea intentar de nuevo? (s=si n=no) (s/n): ";
             char opc1;
             cin >> opc1;
             if (tolower(opc1) == 'n' || tolower(opc1) == 'N') break;
             for (int i = 2; i > 0; --i) {
                 cout << "\033[32m" << "\rReiniciando en " << i << " segundos..." << "\033[0m" << flush;
-                this_thread::sleep_for(chrono::seconds(1));
+                this_thread::sleep_for(chrono::seconds(2));
             }
             cout << endl << endl;
         }
-        // Si resultado == -1, vuelve a mostrar el menú sin preguntar nada
     }
-
     cout << "\n\033[32m" << "Gracias por usar el sistema. Vuelva Pronto! 😃 " << "\033[0m" << endl;
     system("pause");
     return 0;
