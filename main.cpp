@@ -18,7 +18,8 @@ int main()
 {
     interfaz();
     SetConsoleOutputCP(CP_UTF8);
-    while (true) {
+    
+    /*while (true) {
         int resultado = RegistroLogin();
         if (resultado == 1) {
             // Login exitoso, salimos del ciclo
@@ -39,5 +40,5 @@ int main()
     cout << "\n\033[32m" << "Gracias por usar el sistema. Vuelva Pronto! 😃 " << "\033[0m" << endl;
     system("pause");
     return 0;
-    
+    */
 }
