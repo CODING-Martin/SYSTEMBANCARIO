@@ -42,6 +42,7 @@ void prestamos(double& saldo) {
     else {
         cout << "El saldo no puede ser mayor a $1,000,000. Intente nuevamente." << endl;
         cout << "Presione ENTER para continuar...";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
     }
 }

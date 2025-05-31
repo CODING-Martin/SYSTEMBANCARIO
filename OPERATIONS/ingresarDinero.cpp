@@ -1,6 +1,7 @@
 #include <iostream>
 #include "operaciones.h"
 #include "interfaz.h"
+#include <limits>
 using namespace std;
 
 void ingresarDinero(double& saldo) {
@@ -14,6 +15,8 @@ void ingresarDinero(double& saldo) {
             saldo += dinero;
             cout << "Ingreso exitoso. Saldo actual: $" << saldo << endl;
             comprobador = true;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
         }
         else
             cout << "Importe invalida. Debe ser mayor que cero.\n";

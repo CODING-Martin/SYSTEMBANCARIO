@@ -32,8 +32,7 @@ void interfaz() {
             operacionesMenu(opcion, saldo);
             comprobador = false;
             if (opcion == 6){
-                cerrarSesion();
-                comprobador = true;
+            comprobador = cerrarSesion();
             }
     } while (comprobador == false);
 } 
