@@ -12,7 +12,7 @@ void operacionesMenu(int opcion, double& saldo){
         case 1:
             system("cls");
             cout << "\033[34m=====================================\033[0m" << endl;
-            cout << "\033[32m      ESTADO BANCARIO ACTUAL         \033[0m" << endl;
+            cout << "\033[34m      ESTADO BANCARIO ACTUAL         \033[0m" << endl;
             cout << "\033[34m=====================================\033[0m" << endl;
             cout << "\033[36mSaldo actual: $\033[0m" << fixed << setprecision(2) << saldo << endl;
             cout << "\033[34m=====================================\033[0m" << endl;

@@ -56,7 +56,10 @@ cout << endl;
                 //validar usuario y contraseña
                 if (userManager.validateUser(users, password)) {
                     cout << "\033[32m" << "✅ Inicio de sesion exitoso!" << "\033[0m" << endl;
-                    return 1; // login exitoso
+                    cout <<"\033[36m" << "PRESIONE ENTER PARA CONTINUAR..." << "\033[0m" << endl;
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cin.get();
+                    return 1; // login exitoso  
                 } else {
                     intentos--;
                     cout << "\033[31m" << " ❌ CREDENECIALES INCORRECTAS. Intentos restantes: " << intentos << "\033[0m" << endl;
