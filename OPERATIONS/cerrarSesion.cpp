@@ -23,12 +23,13 @@ bool cerrarSesion() {
             cout << endl;
             return true;
         } else if (opcion == 'n' || opcion == 'N') {
-            cout << "Volviendo al menu de inicio" << endl;
+            cout << "Volviendo al menu de inicio";
             for (i = 3; i > 0; --i) {
-            Sleep(1000); 
-            cout << ".";
+                Sleep(1000); 
+                cout << ".";
             }
             return false;
+            cout << endl;
         } else {
             mensajeDeError(); 
         }
