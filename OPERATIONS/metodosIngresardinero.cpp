@@ -72,3 +72,4 @@ void metodosIngresoDinero(double& saldo, int opcion) {
             cin.get();
             break;
     }
+}
