@@ -6,6 +6,7 @@ void ingresarDinero(double& saldo) {
     double dinero;
     bool comprobador = false;
     do{
+        system("cls");
         cout << "Ingrese el importe a ingresar: $";
         cin >> dinero;
         if(dinero > 0){

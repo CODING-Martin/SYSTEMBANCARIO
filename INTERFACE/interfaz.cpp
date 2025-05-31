@@ -13,6 +13,7 @@ void interfaz() {
     bool comprobador = false;
     do {
         do {
+            system("cls");
             cout << "=====================================" << endl;
             cout << "  BANCO DE LA UNIVERSIDAD ACONCAGUA" << endl;
             cout << "                HOLA!" << endl;

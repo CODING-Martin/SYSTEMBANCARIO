@@ -11,6 +11,7 @@ bool cerrarSesion() {
     char opcion;
 
     do {
+        system("cls");
         cout << "Esta seguro que desea cerrar sesion? (s/n): ";
         cin >> opcion;
 
