@@ -17,7 +17,6 @@ void metodosIngresoDinero(double& saldo, int opcion) {
                 cout << endl;
                 cout << "Ingrese el importe a ingresar: $";
                 cin >> dinero;
-                animacion(opcion);
                 if (dinero <= 0) {
                     cout << "El importe debe ser mayor a 0. Intente nuevamente." << endl;
                     cout << "Presione ENTER para continuar...";
@@ -26,6 +25,7 @@ void metodosIngresoDinero(double& saldo, int opcion) {
                     cin.get();
                 }
             } while (dinero <= 0);
+            animacion(opcion);
             saldo += dinero;
             system("cls");
             cout << "====================================" << endl;
@@ -34,7 +34,7 @@ void metodosIngresoDinero(double& saldo, int opcion) {
             cout << endl;
             cout << "Su ingreso fue exitoso. Su saldo ahora es de $" << fixed << setprecision(2) << saldo << "." << endl;
             cout << endl;
-            cout << "Presione ENTER para continuar...";
+            cout << "Presione ENTER para continuar..."<<endl;
             cout << "====================================" << endl;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
@@ -49,16 +49,16 @@ void metodosIngresoDinero(double& saldo, int opcion) {
                 cout << "Ingrese el importe a depositar: $";
                 cin >> dinero;
                 cout << "====================================" << endl;
-                animacion(opcion);
                 if (dinero <= 0) {
                     system("cls");
                     cout << "El importe debe ser mayor a 0. Intente nuevamente." << endl;
-                    cout << "Presione ENTER para continuar...";
+                    cout << "Presione ENTER para continuar..."<<endl;
                     cout << "====================================" << endl;
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     cin.get();
                 }
             } while (dinero <= 0);
+            animacion(opcion);
             saldo += dinero;
             system("cls");
             cout << "====================================" << endl;

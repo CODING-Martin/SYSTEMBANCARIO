@@ -17,7 +17,6 @@ void animacion(int opcion) {
             cout << ".";
         }
         system("cls");
-        cout << endl;
         cout << "Acreditando dinero";
         for (i = 3; i > 0; --i) {
             Sleep(1000); 
@@ -33,7 +32,6 @@ void animacion(int opcion) {
                 cout << ".";
             }
             system("cls");
-            cout << endl;
             cout << "Acreditando dinero";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
