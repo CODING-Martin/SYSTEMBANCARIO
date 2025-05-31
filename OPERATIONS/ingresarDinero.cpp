@@ -12,7 +12,6 @@ void ingresarDinero(double& saldo) {
             cout << "Ingreso exitoso. Saldo actual: $" << saldo << endl;
             saldo += dinero;
             comprobador = true;
-            
         }
         else
             cout << "Importe invalida. Debe ser mayor que cero.\n";
