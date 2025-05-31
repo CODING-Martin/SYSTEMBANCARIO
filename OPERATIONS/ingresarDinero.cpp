@@ -10,9 +10,11 @@ void ingresarDinero(double& saldo) {
         cin >> dinero;
         if(dinero > 0){
             cout << "Ingreso exitoso. Saldo actual: $" << saldo << endl;
+            saldo += dinero;
+            comprobador = true;
+            
         }
-        else{
+        else
             cout << "Importe invalida. Debe ser mayor que cero.\n";
-        }
     }while(!comprobador);
 }
