@@ -9,7 +9,6 @@ bool comprobadorDeOpciones(int opcion, int limite) {
     if (opcion >= 1 && opcion <= limite) {
         return true;
     } else {
-        cout << "Error: La opción ingresada (" << opcion << ") no es válida. "<< "Debe estar entre 1 y " << limite << "." << endl;
         mensajeDeError();
         return false;
     }

@@ -9,5 +9,6 @@ void interfaz();
 void opcionesMenu(int opcion);
 bool comprobadorDeOpciones(int opcion, int limite);
 void mensajeDeError();
+bool cerrarSesion();
 
 #endif // INTERFAZ_H

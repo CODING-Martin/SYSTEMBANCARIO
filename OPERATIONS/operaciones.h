@@ -5,7 +5,7 @@
 
 void operacionesMenu(int opcion, double& saldo);
 void prestamos(double& saldo);
-bool cerrarSesion();
+
 
 void calcularPrestamos(double saldo, double& prestamoMaximo, int cuotas);
 

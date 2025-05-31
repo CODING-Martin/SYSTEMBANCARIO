@@ -1,37 +1,32 @@
 #include <iostream>
-#include "interfaz.h"
-#include <unistd.h>
+#include <unistd.h> 
+#include <windows.h> 
+#include "operaciones.h"
+
+
 using namespace std;
 
-bool cerrarSesion(){
+bool cerrarSesion() {
     int i;
     char opcion;
-    bool comprobador = false;
-    do
-    {
-        cout<<"¿Esta seguro que desea cerrar sesion? (s/n): ";
+
+    do {
+        cout << "¿Está seguro que desea cerrar sesión? (s/n): ";
         cin >> opcion;
-            if(opcion == 's' || opcion == 'S'){
-                cout << "Cerrando sesion";
-                    for(i = 3; i > 0; --i){
-                        sleep(1000);
-                        cout <<".";
-                    }
-                    comprobador = true;
-                    return true;
+
+        if (opcion == 's' || opcion == 'S') {
+            cout << "Cerrando sesión";
+            for (i = 3; i > 0; --i) {
+                Sleep(1000); 
+                cout << ".";
             }
-            else if (opcion == 'n' || opcion == 'N'){
-                cout << "Volviendo al menu de inicio";
-                    for(i = 3; i > 0; --i){
-                        sleep(1000);
-                        cout <<".";
-                    }
-                    return false;
-                    comprobador = true;
-            } 
-            else{
-                mensajeDeError();
-                comprobador = false;
-            }
-    }while (comprobador == false);   
+            cout << endl;
+            return true;
+        } else if (opcion == 'n' || opcion == 'N') {
+            cout << "Volviendo al menú de inicio..." << endl;
+            return false;
+        } else {
+            mensajeDeError(); 
+        }
+    } while (true);
 }
