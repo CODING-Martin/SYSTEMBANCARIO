@@ -8,11 +8,11 @@ void ingresarDinero(double& saldo) {
     bool comprobador = false;
     do{
         system("cls");
-        cout << "Ingrese el importe a ingresar: $";
+        cout << "Ingrese el importe: $";
         cin >> dinero;
         if(dinero > 0){
-            cout << "Ingreso exitoso. Saldo actual: $" << saldo << endl;
             saldo += dinero;
+            cout << "Ingreso exitoso. Saldo actual: $" << saldo << endl;
             comprobador = true;
         }
         else
