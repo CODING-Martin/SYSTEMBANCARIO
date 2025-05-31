@@ -3,7 +3,7 @@
 using namespace std;
 
 void ingresarDinero(double& saldo) {
-    double saldo, dinero;
+    double dinero;
     bool comprobador = false;
     do{
         cout << "Ingrese el importe a ingresar: $";
