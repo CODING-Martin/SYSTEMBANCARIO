@@ -30,6 +30,7 @@ void interfaz() {
             comprobador = comprobadorDeOpciones(opcion, limite);
             }while (!comprobador);
             operacionesMenu(opcion, saldo);
+            comprobador = false;
             if (opcion == 6){
                 cerrarSesion();
                 comprobador = true;
