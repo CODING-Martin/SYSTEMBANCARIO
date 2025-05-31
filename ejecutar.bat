@@ -1,5 +1,5 @@
 @echo off
 cls 
 echo Compilando sistema bancario...
-BIN\bancario.exe
+BIN\output\bancario.exe
 pause
