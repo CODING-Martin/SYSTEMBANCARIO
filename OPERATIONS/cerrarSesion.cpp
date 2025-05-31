@@ -22,7 +22,6 @@ bool cerrarSesion(){
             }
             else if (opcion == 'n' || opcion == 'N'){
                 cout << "Volviendo al menu de inicio";
-                cout << "Cerrando sesion";
                     for(i = 3; i > 0; --i){
                         sleep(1000);
                         cout <<".";

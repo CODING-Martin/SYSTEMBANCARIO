@@ -1,14 +1,12 @@
-#ifndef operaciones_h
-#define operaciones_h
+#ifndef OPERACIONES_H
+#define OPERACIONES_H
+
 #include "interfaz.h"
-using namespace std;
 
 void operacionesMenu(int opcion, double& saldo);
 void prestamos(double& saldo);
 bool cerrarSesion();
 
+void calcularPrestamos(double saldo, double& prestamoMaximo, int cuotas);
 
-//subfunciones
-void calcularPrestamos(double saldo, double prestamoMaximo,int coutas);
-
-#endif
+#endif 

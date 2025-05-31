@@ -1,13 +1,13 @@
+#ifndef INTERFAZ_H
+#define INTERFAZ_H
 
-#ifndef interfaz_h
-#define interfaz_h
-#include <string>
-using namespace std;
-//codigo sub main
+
+// Funciones principales
 void interfaz();
-//codigos complementarios
+
+// Funciones complementarias
 void opcionesMenu(int opcion);
 bool comprobadorDeOpciones(int opcion, int limite);
 void mensajeDeError();
 
-#endif
+#endif // INTERFAZ_H
