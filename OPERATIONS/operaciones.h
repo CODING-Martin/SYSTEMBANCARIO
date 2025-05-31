@@ -5,6 +5,7 @@
 
 void operacionesMenu(int opcion, double& saldo);
 void prestamos(double& saldo);
+void ingresarDinero(double& saldo);
 
 
 void calcularPrestamos(double saldo, double& prestamoMaximo, int cuotas);

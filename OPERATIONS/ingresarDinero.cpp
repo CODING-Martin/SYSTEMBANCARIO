@@ -2,7 +2,7 @@
 #include "operaciones.h"
 using namespace std;
 
-void ingresarDinero(){
+void ingresarDinero(double& saldo) {
     double saldo, dinero;
     bool comprobador = false;
     do{
