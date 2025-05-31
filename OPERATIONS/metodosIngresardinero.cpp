@@ -23,7 +23,7 @@ void metodosIngresoDinero(double& saldo, int opcion) {
                     cout << "          INGRESO DE DINERO" << endl;
                     cout << "====================================" << endl;
                     cout << "El importe debe ser mayor a 0. Intente nuevamente." << endl;
-                    cout << "Presione ENTER para continuar...";
+                    cout << "Presione ENTER para continuar..."<<endl;
                     cout << "====================================" << endl;
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     cin.get();
