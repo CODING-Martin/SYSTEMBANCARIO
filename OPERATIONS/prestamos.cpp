@@ -9,7 +9,7 @@ void prestamos(double& saldo) {
     double importePrestamos;
     double prestamoMaximo, deuda;
     int cuotas;
-    if (saldo > 10000000) {
+    if (saldo > 1000000) {
         do {
             cout << "Ingrese la cantidad de cuotas que desea pagar: ";
             cin >> cuotas;
@@ -36,6 +36,12 @@ void prestamos(double& saldo) {
             cout << "Su prestamo fue exitoso. Su saldo ahora es de $" << saldo << "." << endl;
             cout << "El importe de cada cuota es de $" << (importePrestamos / cuotas) << "." << endl;
             cout << "Presione ENTER para continuar...";
+
             cin.get();
+    }
+    else {
+        cout << "El saldo no puede ser mayor a $1,000,000. Intente nuevamente." << endl;
+        cout << "Presione ENTER para continuar...";
+        cin.get();
     }
 }
