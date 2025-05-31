@@ -14,6 +14,7 @@ void ingresarDinero(double& saldo) {
         cin >> dinero;
         if(dinero > 0){
             saldo += dinero;
+            system("cls");
             cout << "Ingreso exitoso. Saldo actual: $" << fixed << setprecision(2) << saldo << endl;
             comprobador = true;
             cout << endl;

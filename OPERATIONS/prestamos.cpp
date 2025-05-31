@@ -12,6 +12,7 @@ void prestamos(double& saldo) {
     int cuotas;
     if (saldo > 1000000) {
         do {
+            system("cls");
             cout << "Ingrese la cantidad de cuotas que desea pagar: ";
             cin >> cuotas;
             if (cuotas <= 0) {
@@ -21,23 +22,25 @@ void prestamos(double& saldo) {
         } while (cuotas <= 0);
         calcularPrestamos(saldo, prestamoMaximo, cuotas);
         do {
+            system("cls");
             cout << "En base a su sueldo le podemos prestar un importe maximo de $" <<fixed << setprecision(2) << prestamoMaximo << "." << endl;
             cout << "Ingrese el importe a prestar: $";
             cin >> importePrestamos;
             if (importePrestamos > prestamoMaximo) {
+                system("cls");
                 cout << "El importe no puede ser mayor que el maximo permitido. Intente nuevamente." << endl;
                 cout << "Presione ENTER para continuar...";
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cin.get();
             }
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         } while (importePrestamos > prestamoMaximo);
             saldo += importePrestamos;
             deuda = importePrestamos;
+            system("cls");
             cout << "Su prestamo fue exitoso. Su saldo ahora es de $" << fixed << setprecision(2) << saldo << "." << endl;
             cout << "El importe de cada cuota es de $" << fixed << setprecision(2)<< (importePrestamos / cuotas) << "." << endl;
             cout << "Presione ENTER para continuar...";
-
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
     }
     else {

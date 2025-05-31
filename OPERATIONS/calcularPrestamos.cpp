@@ -4,5 +4,5 @@
 using namespace std;
 
 void calcularPrestamos(double saldo, double& prestamoMaximo, int cuotas){
-    prestamoMaximo = (saldo * 25) / 100;
+    prestamoMaximo = ((saldo * 25) / 100) * cuotas;
 }
