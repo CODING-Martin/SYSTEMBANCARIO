@@ -31,13 +31,14 @@ void animacion(int opcion) {
                 Sleep(1000); 
                 cout << ".";
             }
+        }
             system("cls");
             cout << "Acreditando dinero";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";
             }
-        }
+        break;
     }
     
 }
