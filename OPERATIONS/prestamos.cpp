@@ -22,11 +22,11 @@ void prestamos(double& saldo) {
     calcularPrestamos(saldo, prestamoMaximo, cuotas);
 
     do {
-        cout << "En base a su sueldo le podemos prestar un importe máximo de $" << prestamoMaximo << "." << endl;
+        cout << "En base a su sueldo le podemos prestar un importe maximo de $" << prestamoMaximo << "." << endl;
         cout << "Ingrese el importe a prestar: $";
         cin >> importePrestamos;
         if (importePrestamos > prestamoMaximo) {
-            cout << "El importe no puede ser mayor que el máximo permitido. Intente nuevamente." << endl;
+            cout << "El importe no puede ser mayor que el maximo permitido. Intente nuevamente." << endl;
             cout << "Presione ENTER para continuar...";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
@@ -36,7 +36,7 @@ void prestamos(double& saldo) {
 
     saldo += importePrestamos;
     deuda = importePrestamos;
-    cout << "Su préstamo fue exitoso. Su saldo ahora es de $" << saldo << "." << endl;
+    cout << "Su prestamo fue exitoso. Su saldo ahora es de $" << saldo << "." << endl;
     cout << "El importe de cada cuota es de $" << (importePrestamos / cuotas) << "." << endl;
     cout << "Presione ENTER para continuar...";
     cin.get();
