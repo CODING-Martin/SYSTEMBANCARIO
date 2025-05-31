@@ -26,11 +26,12 @@ void animacion(int opcion) {
         case 2:
         system("cls");
         cout << "Ingrese el dinero por la ranura";
-        for (j = 3; j > 0; --i) {
+        for (j = 0; j < 3 ; ++j) {
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";
             }
+            system("cls");
         }
             system("cls");
             cout << "Acreditando dinero";
