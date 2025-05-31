@@ -25,8 +25,9 @@ void animacion(int opcion) {
         break;
         case 2:
         system("cls");
-        cout << "Ingrese el dinero por la ranura";
+        
         for (j = 0; j < 3 ; ++j) {
+            cout << "Ingrese el dinero por la ranura";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";

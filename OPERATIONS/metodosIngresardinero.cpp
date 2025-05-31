@@ -66,7 +66,7 @@ void metodosIngresoDinero(double& saldo, int opcion) {
             cout << "====================================" << endl;
             cout << "Su ingreso fue exitoso. Su saldo ahora es de $" << fixed << setprecision(2) << saldo << "." << endl;
             cout << endl;
-            cout << "Presione ENTER para continuar...";
+            cout << "Presione ENTER para continuar..."<<endl;
             cout << "====================================" << endl;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
