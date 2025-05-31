@@ -2,6 +2,7 @@
 #include "operaciones.h"
 #include "interfaz.h"
 #include <limits>
+#include <iomanip>
 using namespace std;
 
 void ingresarDinero(double& saldo) {
@@ -13,8 +14,10 @@ void ingresarDinero(double& saldo) {
         cin >> dinero;
         if(dinero > 0){
             saldo += dinero;
-            cout << "Ingreso exitoso. Saldo actual: $" << saldo << endl;
+            cout << "Ingreso exitoso. Saldo actual: $" << fixed << setprecision(2) << saldo << endl;
             comprobador = true;
+            cout << endl;
+            cout << "Presione ENTER para continuar...";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
         }
