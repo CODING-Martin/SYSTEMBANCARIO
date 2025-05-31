@@ -6,7 +6,7 @@
 #include "recibirDinero.h"
 using namespace std;
 
-
+//llamada de las funciones donde se realizan las operaciones bancarias
 void operacionesMenu(int opcion, double& saldo){
     switch (opcion){
         case 1:
@@ -16,9 +16,12 @@ void operacionesMenu(int opcion, double& saldo){
             cout << "\033[34m=====================================\033[0m" << endl;
             cout << "\033[36mSaldo actual: $\033[0m" << fixed << setprecision(2) << saldo << endl;
             cout << "\033[34m=====================================\033[0m" << endl;
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpia el buffer antes de pedir ENTER
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
             cout << "\033[36mPresione ENTER para continuar...\033[0m" << endl;
             cin.get(); 
+            break;
+        case 2:
+            transferenciaDinero(saldo);
             break;
         case 3:
             ingresarDinero(saldo);

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//funcion para dar prestamos, debe superar el 1M de saldo para poder solicitar un prestamo
 void prestamos(double& saldo) {
     double importePrestamos;
     double prestamoMaximo, deuda;

@@ -4,9 +4,9 @@
 #include "interfaz.h"
 #include "operaciones.h"
 #include <limits>
-
 using namespace std;
 
+//funcion del menu principal del sistema bancario
 void interfaz() {
     system("cls");
     cout << "\033[36mCargando el menú principal\033[0m";

@@ -1,5 +1,11 @@
 ---------LEERLO POR FAVOR------
+
+
 -----SISTEMA BANCARIO EN LA TERMINAL EN C++-----
+
+LEER COMPLETO EL README POR FAVOR,GRACIAS :)
+
+
 repositorio: https://github.com/CODING-Martin/SYSTEMBANCARIO 
 
 
@@ -40,3 +46,6 @@ Uso de GitHub
 El repositorio se utiliza para trabajo colaborativo y para guardar el progreso del proyecto.
 Cada cambio debe ser guardado con git add ., git commit -m "mensaje" y git push origin main.
 Así, todo el equipo puede ver el historial de cambios y trabajar sobre la última versión del código.
+
+
+////// TENGA EN CUENTA QUE UNA VEZ CERRADA LA TERMINAL SE PIERDEN LOS CAMBIOS YA QUE NO CUENTA CON UNA BASE DE DATOS //////

@@ -2,9 +2,9 @@
 #include <iostream>
 #include <limits> 
 #include "interfaz.h"
-
 using namespace std;
 
+//funcion que muestra un mensaje de error si la opcion ingresada no es valida
 void mensajeDeError() {
     system("cls");
     cout << "\033[31m  ❌  La opción no existe. Revise los datos ingresados e intente nuevamente.\033[0m\n\n";

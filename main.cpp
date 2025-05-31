@@ -1,3 +1,4 @@
+//incluimos todas las funciones necesarias
 #include <windows.h>
 #undef byte
 #include <iostream>
@@ -10,14 +11,14 @@ using namespace std;
 #include "USERS/gestionUsuarios.h"
 #include <string>
 #include <algorithm>
-
+//llamado de las funciones
 void interfaz();
 int RegistroLogin();
-UserManager userManager;
+UserManager userManager; // esta sirve para manejar los usuarios
 
 int main()
 {
-    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8); // para permitir caracteres UTF-8 en la consola
     // Bucle de login
     while (true) {
         int resultado = RegistroLogin();
@@ -26,7 +27,8 @@ int main()
             break;
         } else if (resultado == 0) {
             // Usuario fallo login o quiere salir
-            cout << "Desea intentar de nuevo? (s=si n=no) (s/n): ";
+            cout <<endl;
+            cout << "\033[31mDesea intentar de nuevo? (s=si n=no) (s/n): \033[0m";
             char opc1;
             cin >> opc1;
             if (tolower(opc1) == 'n' || tolower(opc1) == 'N') {
@@ -43,6 +45,7 @@ int main()
     }
     // Acceso al sistema bancario
     interfaz();
+    // Mensaje de despedida
     cout << "\n\033[32m" << "Gracias por usar el sistema bancario UDA. Vuelva Pronto! 😃 " << "\033[0m" << endl;
     system("pause");
     return 0;

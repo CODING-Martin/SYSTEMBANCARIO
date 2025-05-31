@@ -3,6 +3,8 @@
 #include <limits>
 using namespace std;
 
+//FUNCION PARA RECIBIR DINERO
+// Esta función permite al usuario recibir dinero, actualizando su saldo.
 void recibirDinero(double& saldo) {
     double monto;
     do {

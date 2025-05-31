@@ -20,6 +20,7 @@ int RegistroLogin() {
     string users, password;
     int opc;
     cout << endl;
+    //mensaje de opciones de inicio de sesion
 while (true) {
     if (userManager.getUserCount() == 1) {
         cout << "\033[35m 1. Presione 1 para iniciar sesion (SOLO ADMINISTRADOR)\033[0m" << endl;
@@ -40,7 +41,7 @@ while (true) {
     }
 }
 cout << endl;
-
+//mensaje de opciones de inicio de sesion
     switch (opc) {
         case 1:
             cout << "\033[35m" << "🔒 INGRESE SUS CREDENCIALES DE INICIO DE SESION:" << "\033[0m" << endl;
@@ -52,6 +53,7 @@ cout << endl;
                 cout << "\033[35m🔑 CONTRASEÑA: \033[0m" << endl;
                 cin >> password;
                 cout << endl;
+                //validar usuario y contraseña
                 if (userManager.validateUser(users, password)) {
                     cout << "\033[32m" << "✅ Inicio de sesion exitoso!" << "\033[0m" << endl;
                     return 1; // login exitoso
@@ -60,6 +62,7 @@ cout << endl;
                     cout << "\033[31m" << " ❌ CREDENECIALES INCORRECTAS. Intentos restantes: " << intentos << "\033[0m" << endl;
                 }
             }
+            // Si se agotan los intentos de inicio de sesion, se muestra un mensaje de error
             cout << " ❌ No quedan intentos. Por favor, registre un nuevo usuario." << endl;
             cout << endl;
             return 0; // login fallido
@@ -79,7 +82,7 @@ cout << endl;
                 cout << endl;
                 cout << "\033[36m" << "**DEBE INICIAR SESION NUEVAMENTE**" << "\033[0m" << endl;
             }
-            return -1; // registro, volver a mostrar menú
+            return -1; // registro, volver a mostrar menu
     }
     return 0; // por defecto
 }

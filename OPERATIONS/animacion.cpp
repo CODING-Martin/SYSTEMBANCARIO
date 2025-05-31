@@ -6,6 +6,7 @@
 #include <windows.h> 
 #include <iomanip>
 using namespace std;
+//estilos a la terminal power shell
 void animacion(int opcion) {
     int i,j;
     switch (opcion) {

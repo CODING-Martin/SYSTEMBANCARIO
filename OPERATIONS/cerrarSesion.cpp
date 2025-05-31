@@ -2,10 +2,9 @@
 #include <unistd.h> 
 #include <windows.h> 
 #include "operaciones.h"
-
-
 using namespace std;
 
+// Funcion para cerrar sesion en el sistema bancario 
 bool cerrarSesion() {
     int i;
     char opcion;
