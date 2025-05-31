@@ -5,6 +5,9 @@ using namespace std;
 
 void operacionesMenu(int opcion, double& saldo){
     switch (opcion){
+        case 3:
+            ingresarDinero(saldo);
+            break;
         case 5:
             prestamos(saldo);
             break;
