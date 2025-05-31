@@ -12,11 +12,11 @@ bool cerrarSesion() {
 
     do {
         system("cls");
-        cout << "Esta seguro que desea cerrar sesion? (s/n): ";
+        cout << "\033[33mEsta seguro que desea cerrar sesion? (s=si n=no) (s/n):\033[0m ";
         cin >> opcion;
 
         if (opcion == 's' || opcion == 'S') {
-            cout << "Cerrando sesion";
+            cout << "\033[31mCerrando sesion\033[0m";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";
@@ -24,7 +24,7 @@ bool cerrarSesion() {
             cout << endl;
             return true;
         } else if (opcion == 'n' || opcion == 'N') {
-            cout << "Volviendo al menu de inicio";
+            cout << "\033[32mVolviendo al menu de inicio\033[0m";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";

@@ -11,13 +11,13 @@ void animacion(int opcion) {
     switch (opcion) {
         case 1:
         system("cls");
-        cout << "Procensando con transferencia";
+        cout << "\033[32mProcensando transferencia\033[0m";
         for (i = 3; i > 0; --i) {
             Sleep(1000); 
             cout << ".";
         }
         system("cls");
-        cout << "Acreditando dinero";
+        cout << "\033[32mAcreditando dinero\033[0m";
         for (i = 3; i > 0; --i) {
             Sleep(1000); 
             cout << ".";
@@ -27,7 +27,7 @@ void animacion(int opcion) {
         system("cls");
         
         for (j = 0; j < 3 ; ++j) {
-            cout << "Ingrese el dinero por la ranura";
+            cout << "\033[33mValidando ingreso del dinero,espere un momento\033[0m";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";
@@ -35,7 +35,7 @@ void animacion(int opcion) {
             system("cls");
         }
             system("cls");
-            cout << "Acreditando dinero";
+            cout << "\033[32mAcreditando dinero\033[0m";
             for (i = 3; i > 0; --i) {
                 Sleep(1000); 
                 cout << ".";
