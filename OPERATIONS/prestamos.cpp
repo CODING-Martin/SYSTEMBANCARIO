@@ -48,6 +48,8 @@ void prestamos(double& saldo) {
             cout <<endl;
             cout << "\033[34m1) 3 cuotas con interes\033[0m" << endl;
             cout << "\033[34m2) 6 cuotas con interes\033[0m" << endl;
+            cout <<endl;
+            cout << "\033[36m Su Opcion: \033[0m";
             cin >> cuotas;
             if (cin.fail() || (cuotas != 1 && cuotas != 2)) {
                 cin.clear();
