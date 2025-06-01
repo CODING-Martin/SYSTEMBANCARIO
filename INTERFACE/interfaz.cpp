@@ -7,7 +7,7 @@
 using namespace std;
 
 //funcion del menu principal del sistema bancario
-void interfaz() {
+void interfaz( double& deuda) {
     system("cls");
     cout << "\033[36mCargando el menú principal\033[0m";
     for (int i = 0; i < 3; ++i) {
@@ -23,9 +23,7 @@ void interfaz() {
             system("cls");
             cout << "\033[34m=====================================\033[0m" << endl;
             cout << "\033[34m  BIENVENIDO AL SISTEMA BANCARIO UDA \033[0m" << endl;
-            cout << "\033[34m               \033[0m" << endl;
             cout << "\033[34m=====================================\033[0m" << endl;
-            cout << "\033[36m\n Que desea hacer? \033[0m" << endl;
             cout << "\033[35m\n 1) Consultar estado bancario\033[0m" << endl;
             cout << "\033[35m\n 2) Transferir dinero\033[0m" << endl;
             cout << "\033[35m\n 3) Ingresar dinero\033[0m" << endl;
@@ -37,7 +35,7 @@ void interfaz() {
             cin >> opcion;
             comprobador = comprobadorDeOpciones(opcion, limite);
             }while (!comprobador);
-            operacionesMenu(opcion, saldo);
+            operacionesMenu(opcion, saldo, deuda);
             comprobador = false;
             if (opcion == 6){
             comprobador = cerrarSesion();
