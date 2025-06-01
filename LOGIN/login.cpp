@@ -81,6 +81,8 @@ cout << endl;
             if (!userManager.createUser(users, password)) {
                 cout << "\033[31m" << "❌  El usuario o contraseña ya existe." << "\033[0m" << endl;
             } else {
+                system("cls");
+                cout << endl;
                 cout << "\033[32m" << "✅  Usuario creado exitosamente. Por favor, inicie sesion." << "\033[0m" << endl;
                 cout << endl;
                 cout << "\033[36m" << "**DEBE INICIAR SESION NUEVAMENTE**" << "\033[0m" << endl;
