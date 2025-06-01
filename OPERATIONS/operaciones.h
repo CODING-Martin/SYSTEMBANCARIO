@@ -3,7 +3,7 @@
 
 #include "interfaz.h"
 //llamadas de las funciones donde se realizan las operaciones bancarias, sin ellas no se puede realizar ninguna operacion
-void operacionesMenu(int opcion, double& saldo);
+void operacionesMenu(int opcion, double& saldo, double& deuda);
 void prestamos(double& saldo);
 void ingresarDinero(double& saldo);
 void recibirDinero(double& saldo);

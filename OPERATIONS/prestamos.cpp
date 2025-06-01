@@ -16,12 +16,12 @@ void prestamos(double& saldo) {
     if (saldo >= 1000000) {
         do {
             system("cls");
-            cout << "\033[35mIngrese la cantidad de cuotas que desea SIN INTERES:\033[0m" << endl;
-            cout << "\033[32m1) 3 cuotas sin interes\033[0m" << endl;
-            cout << "\033[32m2) 6 cuotas sin interes\033[0m" << endl;
-            cout << "\033[32m3) 8 cuotas sin interes\033[0m" << endl;
-            cout << "\033[32m4) 12 cuotas sin interes\033[0m" << endl;
-            cout << "\033[32m5) 24 cuotas sin interes\033[0m" << endl;
+            cout << "\033[35mIngrese la cantidad de cuotas que desea:\033[0m" << endl;
+            cout << "\033[32m1) 3 cuotas\033[0m" << endl;
+            cout << "\033[32m2) 6 cuotas\033[0m" << endl;
+            cout << "\033[32m3) 8 cuotas\033[0m" << endl;
+            cout << "\033[32m4) 12 cuotas\033[0m" << endl;
+            cout << "\033[32m5) 24 cuotas\033[0m" << endl;
             cin >> cuotas;
             if (cin.fail() || cuotas < 1 || cuotas > 5) {
                 cin.clear();
