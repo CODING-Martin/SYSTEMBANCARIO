@@ -42,11 +42,12 @@ void prestamos(double& saldo) {
     } else if (saldo > 100000) {
         do {
             system("cls");
-            interes = 0.20;
+            interes = 0.25;
             cout << "\033[31mSu saldo es menor a $1,000,000. Solo puede elegir 3 o 6 cuotas CON INTERES.\033[0m" << endl;
             cout << "\033[35mIngrese la cantidad de cuotas que desea:\033[0m" << endl;
-            cout << "\033[32m1) 3 cuotas con interes\033[0m" << endl;
-            cout << "\033[32m2) 6 cuotas con interes\033[0m" << endl;
+            cout <<endl;
+            cout << "\033[34m1) 3 cuotas con interes\033[0m" << endl;
+            cout << "\033[34m2) 6 cuotas con interes\033[0m" << endl;
             cin >> cuotas;
             if (cin.fail() || (cuotas != 1 && cuotas != 2)) {
                 cin.clear();
@@ -70,7 +71,7 @@ void prestamos(double& saldo) {
         system("cls");
         cout << "\033[35mEn base a su saldo le podemos prestar un importe máximo de $\033[0m"
             << fixed << setprecision(2) << prestamoMaximo << "." << endl;
-        cout << "\033[35mIngrese el importe a prestar: $\033[0m";
+        cout << "\033[35mPor favor, ingrese el monto que desea solicitar como préstamo: $\033[0m";
         cin >> importePrestamos;
         if (cin.fail() || importePrestamos > prestamoMaximo || importePrestamos <= 0) {
             cin.clear();
